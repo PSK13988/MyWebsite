@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album details</title>
+</head>
+<body>
+<h1>{{album.album_title }}</h1>
+<h3> Album songs: {{album.artist}}</h3>
+
+{% for song in album.song_set.all %}
+    <a href="#"> {{ song.song_title }} </a><br/>
+
+{% endfor %}
+
+</body>
+</html>

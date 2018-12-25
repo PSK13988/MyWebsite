@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyWebSite</title>
+</head>
+<body>
+    <ul>
+        {% for album in all_albums %}
+        <li><a href="#">{{ album.album_title }}</a></li>
+        {% endfor %}
+    </ul>
+
+<a href="/music/youtube/">Youtube</a>
+</body>
+</html>

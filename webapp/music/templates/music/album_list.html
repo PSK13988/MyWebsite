@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Albums</title>
+</head>
+<body>
+<h1>Albums</h1>
+<ul>
+{% for album in object_list %}
+   <li> <a href="{% url 'music:album_detail' album.id %}"> {{ album.album_title }} - {{ album.artist }}</a></li>
+{% empty %}
+    <li>No Albums yet.</li>
+{% endfor %}
+</ul>
+</body>
+</html>
